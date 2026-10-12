@@ -1,0 +1,26 @@
+Algoritmo Dias_De_La_Semana
+Inicio
+  Definir N como entero
+  Escribir "Ingrese un numero del 1 al 7"
+    Leer N
+  Si N >= 1 y N <= 7 entonces
+     Segun
+       1:
+        Escribir "lunes"
+       2:
+        Escribir "martes"
+       3:      
+        Escribir "miercoles"
+       4:     
+        Escribir "jueves"
+       5: 
+        Escribir "viernes"
+       6:
+        Escribir "sabado"
+       7:  
+        Escribir "domingo"
+     FinSegun
+    SiNo
+   Escribir "Error: Ingrese un numero entre 1 a 7"
+  FinSi
+Fin
