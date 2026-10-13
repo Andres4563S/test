@@ -1,14 +1,14 @@
 Algoritmo factorial_de_un numero
 Inicio
    Definir N,X como entero
-   Definir F,O como real
+   Definir F como real
   Escribir "Ingrese un numero entero"
    Leer N
      X=N
+     F=1
   Mientras X=>1 hacer
-   O=N*X
+   F=F*X
    X=X-1
-   F=F+O
  FinMientras
   Escribir "El factorial del numero es:" F
 Fin
