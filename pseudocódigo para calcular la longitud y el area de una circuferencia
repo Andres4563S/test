@@ -1,0 +1,10 @@
+Algoritmo  longitud_area_circuferencia
+Inicio
+   Definir R,L,A como real
+  Escribir "Ingresar el radio:"
+   Leer R
+ L = 2*PI*R
+ A = PI*(R)^2
+  Escribir "La longitud es:" L
+  Escribir "El area del circulo es:" A
+Fin
