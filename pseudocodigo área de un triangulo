@@ -1,4 +1,4 @@
-Algoritmo área de un triangulo
+Algoritmo área de un rectangulo
 Inicio
    Definir B,H,A como real
   Escribir "Ingresar la base:"
