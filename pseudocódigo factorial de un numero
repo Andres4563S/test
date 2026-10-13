@@ -1,14 +1,17 @@
 Algoritmo factorial_de_un numero
 Inicio
-   Definir N,X como entero
-   Definir F como real
-  Escribir "Ingrese un numero entero"
-   Leer N
+    Definir N,X,F como entero
+   Escribir "Ingrese un numero entero"
+    Leer N
+ Si N < 0 Entonces
+   Escribir "No existe factorial para numeros negativos"
+  SiNo
      X=N
      F=1
-  Mientras X=>1 hacer
-   F=F*X
-   X=X-1
- FinMientras
+   Mientras X>=1 hacer
+     F=F*X
+     X=X-1
+   FinMientras
   Escribir "El factorial del numero es:" F
+ FinSi
 Fin
