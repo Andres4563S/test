@@ -1,3 +1,42 @@
 Algoritmo promedio_estudiante_utpl
 Inicio
-  
+  Definir N1, N2, N3, promedio como real
+ Mientras:
+  Escribir "Ingrese nota parcial 1"
+   Leer "N1"
+  Si N1 <= 10 y N1 >= 0 entonces
+   Escribir "La nota no puede menor que 0 ni mayor a 10"
+  Sino
+   Devolver
+  FinSi
+ FinMientras
+ Mientras:
+
+  Escribir "Ingrese nota parcial 2"
+   Leer "N2"
+  Si N2 > 10 y N1 < 0 entonces
+   Escribir "La nota no puede menor que 0 ni mayor a 10"
+  Sino
+   Devolver
+  FinSi
+ FinMientras
+ Mientras:
+
+  Escribir "Ingrese nota parcial 3"
+   Leer "N3"
+  Si N3 > 10 y N1 < 0 entonces
+   Escribir "La nota no puede menor que 0 ni mayor a 10"
+  Sino
+   Devolver
+  FinSi
+ FinMientras
+   N1 <- N1*0.30
+   N2 <- N2*0.30
+   N3 <- N3*0.40
+   promedio <- N1+N2+N3
+  Si promedio >= 7 entonces
+   Escribir "El estudiantes apuebra y su promedio es:", promedio
+  Sino
+   Escribir "El no estudiantes apuebra y su promedio es:", promedio
+  FinSi
+FIn
