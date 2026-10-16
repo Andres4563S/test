@@ -7,28 +7,7 @@ Inicio
     Leer SXH
    X <- 0
 // Horas trabajadas
-   Mientras H <= 0 o H >= 168 hacer
-      Escribir "El numero ingresado no puede ser menor ni igual a 0 o superior a 168 horas"
-      Escribir "Ingrese las horas trabajadas"
-      Leer H
-   FinMientras
-// Sueldo por hora
-   Mientras SXH <= 0 hacer
-      Escribir "El numero ingresado no puede ser menor ni igual a 0"
-      Escribir "Ingrese el suelo por hora trabajada"
-      Leer SXH
-   FinMientras
-// Horas extras
-Algoritmo Horas_de_trabajo
-Inicio
-   Definir H, HE, SXH, S1, S2, SF, X  como real
-   Escribir "Ingrese las horas trabajadas"
-    Leer H
-   Escribir "Ingrese el suelo por hora trabajada"
-    Leer SXH
-   X <- 0
-// Horas trabajadas
-   Mientras H <= 0 o H >= 168 hacer
+   Mientras H <= 0 o H > 168 hacer
       Escribir "El numero ingresado no puede ser menor ni igual a 0 o superior a 168 horas"
       Escribir "Ingrese las horas trabajadas"
       Leer H
@@ -41,14 +20,13 @@ Inicio
    FinMientras
 // Horas extras
    Si H <= 40 Entonces
-      S1 <- H*SXH
-      Escribir "Horas extras trabajadas: 0"
+      SF <- H*SXH
    Sino
-   HE <- H-40
-   S1 <- H*SXH
-   S2 <- HE*(SXH*2)
-   SF <- S1+S2
-   Escribir "El horas extras trabajadas: ", HE
+      HE <- H-40
+      S1 <- 40*SXH
+      S2 <- HE*(SXH*2)
+      SF <- S1 + S2
    FinSi
+   Escribir "El horas extras trabajadas: ", HE
    Escribir "El sueldo semanal es: ", SF
 Fin
