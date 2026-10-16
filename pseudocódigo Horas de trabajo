@@ -1,6 +1,6 @@
 Algoritmo Horas_de_trabajo
 Inicio
-   Definir H, HE, SXH, S1, S2, SF, X  como real
+   Definir H, HE, SXH, S1, S2, SF,   como real
    Escribir "Ingrese las horas trabajadas"
     Leer H
    Escribir "Ingrese el suelo por hora trabajada"
