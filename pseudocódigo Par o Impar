@@ -1,0 +1,11 @@
+Algoritmo Par_o_impar
+Inicio
+    Definir n Como Entero
+    Escribir "Ingrese un numero entero:"
+    Leer n
+    Si n MOD 2 = 0 Entonces
+        Escribir "El numero es PAR"
+    SiNo
+        Escribir "El numero es IMPAR"
+    FinSi
+FinAlgoritmo
