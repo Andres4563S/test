@@ -28,9 +28,9 @@ Inicio
 //Calculo del promedio
    promedio <- (N1*0.30) + (N2*0.30) + (N3*0.40)
   Si promedio >= 7 entonces
-   Escribir "El estudiantes aprueba y su promedio es:", promedio
+   Escribir "El estudiante aprueba y su promedio es:", promedio
   Sino
 
-   Escribir "El no estudiantes aprueba y su promedio es:", promedio
+   Escribir "El no estudiante aprueba y su promedio es:", promedio
   FinSi
 Fin
