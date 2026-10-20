@@ -1,0 +1,11 @@
+Algoritmo Tabla_de_multiplicar_mientras
+    Definir K, i, r Como Entero
+    Escribir "Ingrese el numero entero para mostrar su tabla:"
+    Leer K
+    i <- 1
+    Mientras i <= 10 Hacer
+        r <- K * i
+        Escribir K, " x ", i, " = ", r
+        i <- i + 1
+    FinMientras
+FinAlgoritmo
