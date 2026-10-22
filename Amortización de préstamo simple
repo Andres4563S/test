@@ -1,0 +1,35 @@
+Algoritmo Amortizacion_prestamo_simple
+Inicio
+    Definir monto, tasa, interes_total, cuota Como Real
+    Definir meses Como Entero
+ 
+    Escribir "Ingrese el monto del prestamo:"
+    Leer monto
+    Mientras monto <= 0 Hacer
+        Escribir "El monto debe ser mayor que 0"
+        Escribir "Ingrese el monto del prestamo:"
+        Leer monto
+    FinMientras
+ 
+    Escribir "Ingrese la tasa de interes mensual (%):"
+    Leer tasa
+    Mientras tasa < 0 Hacer
+        Escribir "La tasa no puede ser negativa"
+        Escribir "Ingrese la tasa de interes mensual (%):"
+        Leer tasa
+    FinMientras
+ 
+    Escribir "Ingrese el numero de meses:"
+    Leer meses
+    Mientras meses <= 0 Hacer
+        Escribir "El numero de meses debe ser mayor que 0"
+        Escribir "Ingrese el numero de meses:"
+        Leer meses
+    FinMientras
+ 
+    interes_total <- monto * (tasa / 100) * meses
+    cuota <- (monto + interes_total) / meses
+ 
+    Escribir "Interes total: $", interes_total
+    Escribir "Cuota mensual: $", cuota
+Fin
