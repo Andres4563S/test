@@ -1,0 +1,45 @@
+Algoritmo Ahorro_interes_compuesto
+Inicio
+    Definir capital, deposito, tasa, saldo Como Real
+    Definir N, mes Como Entero
+ 
+    Escribir "Ingrese el capital inicial:"
+    Leer capital
+    Mientras capital < 0 Hacer
+        Escribir "El capital no puede ser negativo"
+        Escribir "Ingrese el capital inicial:"
+        Leer capital
+    FinMientras
+ 
+    Escribir "Ingrese el deposito mensual:"
+    Leer deposito
+    Mientras deposito < 0 Hacer
+        Escribir "El deposito no puede ser negativo"
+        Escribir "Ingrese el deposito mensual:"
+        Leer deposito
+    FinMientras
+ 
+    Escribir "Ingrese el numero de meses:"
+    Leer N
+    Mientras N <= 0 Hacer
+        Escribir "El numero de meses debe ser mayor que 0"
+        Escribir "Ingrese el numero de meses:"
+        Leer N
+    FinMientras
+ 
+    Escribir "Ingrese la tasa mensual de interes (%):"
+    Leer tasa
+    Mientras tasa < 0 Hacer
+        Escribir "La tasa no puede ser negativa"
+        Escribir "Ingrese la tasa mensual de interes (%):"
+        Leer tasa
+    FinMientras
+ 
+    saldo <- capital
+    Para mes <- 1 Hasta N Hacer
+        saldo <- saldo + deposito
+        saldo <- saldo * (1 + tasa / 100)
+        Escribir "Saldo al finalizar el mes ", mes, ": $", saldo
+    FinPara
+    Escribir "Saldo final: $", saldo
+Fin
