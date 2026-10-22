@@ -1,0 +1,38 @@
+Algoritmo Estacion_del_anio
+Inicio
+    Definir mes, dia, dias_mes Como Entero
+    Definir estacion Como Caracter
+ 
+    Escribir "Ingrese el mes (1 a 12):"
+    Leer mes
+    Escribir "Ingrese el dia:"
+    Leer dia
+ 
+    dias_mes <- 31
+    Si mes = 4 O mes = 6 O mes = 9 O mes = 11 Entonces
+        dias_mes <- 30
+    SiNo
+        Si mes = 2 Entonces
+            dias_mes <- 29
+        FinSi
+    FinSi
+ 
+    Si mes < 1 O mes > 12 O dia < 1 O dia > dias_mes Entonces
+        Escribir "Fecha no valida"
+    SiNo
+        Si (mes = 12 Y dia >= 21) O mes = 1 O mes = 2 O (mes = 3 Y dia <= 20) Entonces
+            estacion <- "Verano"
+        SiNo
+            Si (mes = 3 Y dia >= 21) O mes = 4 O mes = 5 O (mes = 6 Y dia <= 20) Entonces
+                estacion <- "Otono"
+            SiNo
+                Si (mes = 6 Y dia >= 21) O mes = 7 O mes = 8 O (mes = 9 Y dia <= 22) Entonces
+                    estacion <- "Invierno"
+                SiNo
+                    estacion <- "Primavera"
+                FinSi
+            FinSi
+        FinSi
+        Escribir "La estacion del anio es: ", estacion
+    FinSi
+Fin
