@@ -1,0 +1,27 @@
+Algoritmo Numero_perfecto
+Inicio
+    Definir N, divisor, suma Como Entero
+ 
+    Escribir "Ingrese un numero entero positivo:"
+    Leer N
+    Mientras N <= 0 Hacer
+        Escribir "El numero debe ser mayor que 0"
+        Escribir "Ingrese un numero entero positivo:"
+        Leer N
+    FinMientras
+ 
+    suma <- 0
+    divisor <- 1
+    Mientras divisor <= Trunc(N / 2) Hacer
+        Si N MOD divisor = 0 Entonces
+            suma <- suma + divisor
+        FinSi
+        divisor <- divisor + 1
+    FinMientras
+ 
+    Si suma = N Y N > 1 Entonces
+        Escribir N, " es un numero perfecto"
+    SiNo
+        Escribir N, " no es un numero perfecto"
+    FinSi
+Fin
