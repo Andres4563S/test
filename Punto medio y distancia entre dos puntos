@@ -1,0 +1,20 @@
+Algoritmo Punto_medio_y_distancia
+Inicio
+    Definir x1, y1, x2, y2, distancia, xm, ym Como Real
+ 
+    Escribir "Ingrese la coordenada x del primer punto:"
+    Leer x1
+    Escribir "Ingrese la coordenada y del primer punto:"
+    Leer y1
+    Escribir "Ingrese la coordenada x del segundo punto:"
+    Leer x2
+    Escribir "Ingrese la coordenada y del segundo punto:"
+    Leer y2
+ 
+    distancia <- RC((x2 - x1)^2 + (y2 - y1)^2)
+    xm <- (x1 + x2) / 2
+    ym <- (y1 + y2) / 2
+ 
+    Escribir "Distancia entre los puntos: ", distancia
+    Escribir "Punto medio: (", xm, ", ", ym, ")"
+Fin
