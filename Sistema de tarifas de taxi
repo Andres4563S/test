@@ -1,0 +1,32 @@
+Algoritmo Tarifas_taxi
+Inicio
+    Definir kilometros, tarifa, total Como Real
+    Definir noche Como Caracter
+ 
+    Escribir "Ingrese la distancia del viaje en km:"
+    Leer kilometros
+    Mientras kilometros < 0 Hacer
+        Escribir "La distancia no puede ser negativa"
+        Escribir "Ingrese la distancia del viaje en km:"
+        Leer kilometros
+    FinMientras
+ 
+    Escribir "Es de noche? Ingrese S o N:"
+    Leer noche
+    Mientras noche <> "S" Y noche <> "N" Hacer
+        Escribir "Debe ingresar S o N"
+        Escribir "Es de noche? Ingrese S o N:"
+        Leer noche
+    FinMientras
+ 
+    tarifa <- 2 + (1.5 * kilometros)
+    total <- tarifa
+    Si kilometros > 10 Entonces
+        total <- total + (total * 0.20)
+    FinSi
+    Si noche = "S" Entonces
+        total <- total + (total * 0.30)
+    FinSi
+ 
+    Escribir "Total a pagar: $", total
+Fin
