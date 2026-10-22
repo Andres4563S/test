@@ -1,0 +1,41 @@
+Algoritmo Bono_productividad
+Inicio
+    Definir sueldo_base, productividad, porcentaje_bono, bono, total Como Real
+ 
+    Escribir "Ingrese el sueldo base:"
+    Leer sueldo_base
+    Mientras sueldo_base < 0 Hacer
+        Escribir "El sueldo base no puede ser negativo"
+        Escribir "Ingrese el sueldo base:"
+        Leer sueldo_base
+    FinMientras
+ 
+    Escribir "Ingrese el porcentaje de productividad (0 a 100):"
+    Leer productividad
+    Mientras productividad < 0 O productividad > 100 Hacer
+        Escribir "La productividad debe estar entre 0 y 100"
+        Escribir "Ingrese el porcentaje de productividad (0 a 100):"
+        Leer productividad
+    FinMientras
+ 
+    Si productividad >= 90 Entonces
+        porcentaje_bono <- 20
+    SiNo
+        Si productividad >= 70 Entonces
+            porcentaje_bono <- 10
+        SiNo
+            Si productividad >= 50 Entonces
+                porcentaje_bono <- 5
+            SiNo
+                porcentaje_bono <- 0
+            FinSi
+        FinSi
+    FinSi
+ 
+    bono <- sueldo_base * (porcentaje_bono / 100)
+    total <- sueldo_base + bono
+ 
+    Escribir "Porcentaje de bono aplicado: ", porcentaje_bono, "%"
+    Escribir "Bono: $", bono
+    Escribir "Total a pagar: $", total
+Fin
