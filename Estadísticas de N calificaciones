@@ -1,0 +1,45 @@
+Algoritmo Estadisticas_calificaciones
+Inicio
+    Definir N, i, aprobados, reprobados Como Entero
+    Definir nota, suma, promedio, mayor, menor Como Real
+ 
+    Escribir "Ingrese la cantidad de calificaciones:"
+    Leer N
+    Mientras N <= 0 Hacer
+        Escribir "La cantidad debe ser mayor que 0"
+        Escribir "Ingrese la cantidad de calificaciones:"
+        Leer N
+    FinMientras
+ 
+    suma <- 0
+    aprobados <- 0
+    reprobados <- 0
+ 
+    Para i <- 1 Hasta N Hacer
+        Escribir "Ingrese la calificacion ", i, " (0 a 10):"
+        Leer nota
+        Mientras nota < 0 O nota > 10 Hacer
+            Escribir "La nota debe estar entre 0 y 10"
+            Escribir "Ingrese la calificacion ", i, " (0 a 10):"
+            Leer nota
+        FinMientras
+ 
+        suma <- suma + nota
+        Si i = 1 Entonces
+            mayor <- nota
+            menor <- nota
+        SiNo
+            Si nota > mayor Entonces
+                mayor <- nota
+            FinSi
+            Si nota < menor Entonces
+                menor <- nota
+            FinSi
+        FinSi
+ 
+        Si nota >= 7 Entonces
+            aprobados <- aprobados + 1
+        SiNo
+            reprobados <- reprobados + 1
+        FinSi
+    FinPara
