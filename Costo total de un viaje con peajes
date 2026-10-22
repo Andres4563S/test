@@ -1,0 +1,56 @@
+Algoritmo Costo_total_viaje
+Inicio
+    Definir distancia, consumo, precio_combustible, litros, costo_combustible Como Real
+    Definir costo_peaje, costo_total_peajes, costo_total Como Real
+    Definir cantidad_peajes Como Entero
+ 
+    Escribir "Ingrese la distancia del viaje en km:"
+    Leer distancia
+    Mientras distancia <= 0 Hacer
+        Escribir "La distancia debe ser mayor que 0"
+        Escribir "Ingrese la distancia del viaje en km:"
+        Leer distancia
+    FinMientras
+ 
+    Escribir "Ingrese el rendimiento del auto en km por litro:"
+    Leer consumo
+    Mientras consumo <= 0 Hacer
+        Escribir "El rendimiento debe ser mayor que 0"
+        Escribir "Ingrese el rendimiento del auto en km por litro:"
+        Leer consumo
+    FinMientras
+ 
+    Escribir "Ingrese el precio del combustible por litro:"
+    Leer precio_combustible
+    Mientras precio_combustible < 0 Hacer
+        Escribir "El precio no puede ser negativo"
+        Escribir "Ingrese el precio del combustible por litro:"
+        Leer precio_combustible
+    FinMientras
+ 
+    Escribir "Ingrese la cantidad de peajes:"
+    Leer cantidad_peajes
+    Mientras cantidad_peajes < 0 Hacer
+        Escribir "La cantidad de peajes no puede ser negativa"
+        Escribir "Ingrese la cantidad de peajes:"
+        Leer cantidad_peajes
+    FinMientras
+ 
+    Escribir "Ingrese el costo unitario de cada peaje:"
+    Leer costo_peaje
+    Mientras costo_peaje < 0 Hacer
+        Escribir "El costo del peaje no puede ser negativo"
+        Escribir "Ingrese el costo unitario de cada peaje:"
+        Leer costo_peaje
+    FinMientras
+ 
+    litros <- distancia / consumo
+    costo_combustible <- litros * precio_combustible
+    costo_total_peajes <- cantidad_peajes * costo_peaje
+    costo_total <- costo_combustible + costo_total_peajes
+ 
+    Escribir "Litros necesarios: ", litros
+    Escribir "Costo de combustible: $", costo_combustible
+    Escribir "Costo de peajes: $", costo_total_peajes
+    Escribir "Costo total del viaje: $", costo_total
+Fin
