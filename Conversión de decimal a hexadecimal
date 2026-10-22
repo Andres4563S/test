@@ -1,0 +1,44 @@
+Algoritmo Decimal_a_hexadecimal
+Inicio
+    Definir numero, residuo Como Entero
+    Definir hexadecimal, digito Como Caracter
+ 
+    Escribir "Ingrese un numero entero decimal no negativo:"
+    Leer numero
+    Mientras numero < 0 Hacer
+        Escribir "El numero debe ser no negativo"
+        Escribir "Ingrese un numero entero decimal no negativo:"
+        Leer numero
+    FinMientras
+ 
+    hexadecimal <- ""
+    Si numero = 0 Entonces
+        hexadecimal <- "0"
+    SiNo
+        Mientras numero > 0 Hacer
+            residuo <- numero MOD 16
+            Si residuo < 10 Entonces
+                digito <- ConvertirATexto(residuo)
+            SiNo
+                Segun residuo Hacer
+                    10:
+                        digito <- "A"
+                    11:
+                        digito <- "B"
+                    12:
+                        digito <- "C"
+                    13:
+                        digito <- "D"
+                    14:
+                        digito <- "E"
+                    15:
+                        digito <- "F"
+                FinSegun
+            FinSi
+            hexadecimal <- Concatenar(digito, hexadecimal)
+            numero <- Trunc(numero / 16)
+        FinMientras
+    FinSi
+ 
+    Escribir "Representacion hexadecimal: ", hexadecimal
+Fin
